@@ -1,4 +1,4 @@
-package tuan02.bai03;
+package tuan02.bai03_Vehicle;
 
 import java.util.Scanner;
 
@@ -58,18 +58,6 @@ public class Vehicle {
             }else{
                 return 5*triGia/100;
             }
-        }
-
-        public void nhap(){
-            Scanner sc = new Scanner(System.in);
-            System.out.println("Nhap ten chu xe:");
-            this.name = sc.nextLine();
-            System.out.println("Nhap loai xe:");
-            this.loaiXe = sc.nextLine();
-            System.out.println("Nhap dung tich:");
-            this.dungTich = sc.nextInt();
-            System.out.println("Nhap gia tri xe:");
-            this.triGia = sc.nextFloat();
         }
 
         public void xuat(){

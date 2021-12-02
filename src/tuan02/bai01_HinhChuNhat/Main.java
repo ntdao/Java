@@ -1,4 +1,4 @@
-package tuan02.bai01;
+package tuan02.bai01_HinhChuNhat;
 
 import java.util.Scanner;
 
@@ -9,8 +9,8 @@ public class Main {
         double a = sc.nextDouble();
         double b = sc.nextDouble();
         HinhChuNhat hcn = new HinhChuNhat();
-        hcn.setcDai(a);
-        hcn.setcRong(b);
+        hcn.setDai(a);
+        hcn.setRong(b);
         System.out.println(hcn);
     }
 }
