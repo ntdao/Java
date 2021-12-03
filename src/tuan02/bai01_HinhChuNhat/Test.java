@@ -2,7 +2,7 @@ package tuan02.bai01_HinhChuNhat;
 
 import java.util.Scanner;
 
-public class Main {
+public class Test {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap vao chieu dai va chieu rong:");

@@ -2,9 +2,9 @@ package tuan02.bai04_Account;
 
 import java.util.Scanner;
 
-public class Main {
-    static Scanner sc = new Scanner(System.in);
+public class Test {
     static void nhapTK(Account tk) {
+        Scanner sc = new Scanner(System.in);
         System.out.println("Nhap so tai khoan:");
         tk.setSoTK(sc.nextInt());
         sc.nextLine();
@@ -14,6 +14,7 @@ public class Main {
         tk.setTienTrongTK(sc.nextDouble());
     }
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         Account[] a = null;
         int k, lc, n = 0;
         long stk1, stk2;

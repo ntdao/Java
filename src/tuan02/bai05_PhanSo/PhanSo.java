@@ -31,4 +31,14 @@ public class PhanSo {
     public String toString() {
         return tuSo + "/" + mauSo;
     }
+
+    public void inPS(){
+        if(tuSo == 0){
+            System.out.println("0");
+        }else if(tuSo == mauSo){
+            System.out.println("1");
+        } else{
+            System.out.println(tuSo + "/" + mauSo);
+        }
+    }
 }

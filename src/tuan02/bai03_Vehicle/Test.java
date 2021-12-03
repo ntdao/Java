@@ -2,7 +2,7 @@ package tuan02.bai03_Vehicle;
 
 import java.util.Scanner;
 
-public class Main {
+public class Test {
     public static void nhap(Vehicle xe){
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap ten chu xe:");

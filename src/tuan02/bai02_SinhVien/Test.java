@@ -2,7 +2,7 @@ package tuan02.bai02_SinhVien;
 
 import java.util.Scanner;
 
-public class Main {
+public class Test {
 
     public static void nhap(SinhVien sv){
         Scanner sc = new Scanner(System.in);

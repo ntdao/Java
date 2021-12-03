@@ -2,16 +2,18 @@ package tuan02.bai05_PhanSo;
 
 import java.util.Scanner;
 
-public class Main {
+public class Test {
+
     static void nhapPS(PhanSo p){
         Scanner sc = new Scanner(System.in);
-        System.out.println("Nhap tu so:");
+        System.out.print("Nhap tu so: ");
         p.setTuSo(sc.nextInt());
         do {
-            System.out.println("Nhap mau so:");
+            System.out.print("Nhap mau so: ");
             p.setMauSo(sc.nextInt());
         } while(p.getMauSo() == 0);
     }
+
     static PhanSo toiGianPS(PhanSo p){
         int num1 = p.getTuSo(), num2 = p.getMauSo();
         while (num1 != num2) {
@@ -53,10 +55,13 @@ public class Main {
         nhapPS(p1);
         nhapPS(p2);
         System.out.println("Phan so 1 sau khi toi gian la:" + toiGianPS(p1));
-        System.out.println("Nghich dao phan so 1:" + nghichDaoPS(p1));
         System.out.println("Phan so 1 sau khi toi gian la:" + toiGianPS(p2));
-        PhanSo p3 = cong(p1,p2);
-        System.out.println("Tong hai phan so la:" + toiGianPS(p3));
+
+        System.out.println("Nghich dao phan so 1:" + nghichDaoPS(p1));
+
+        PhanSo p3 = toiGianPS(cong(p1,p2));
+        System.out.println("Tong hai phan so la:");
+        p3.inPS();
         System.out.println("Hieu hai phan so la:" + toiGianPS(tru(p1,p2)));
         System.out.println("Tich hai phan so la:" + toiGianPS(nhan(p1,p2)));
         System.out.println("Thuong hai phan so la:" + toiGianPS(chia(p1,p2)));
