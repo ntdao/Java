@@ -60,21 +60,23 @@ public class Account {
                 ", so tien trong tai khoan =" + str1 + '}';
     }
 
-    public void napTien(){
-        double t;
-        do{
-            System.out.println("Nhap so tien can nap them:");
-            t = sc.nextDouble();
-        }while(t < 0);
-        this.tienTrongTK += t;
-        System.out.println("Nap tien thanh cong!");
+    public double napTien(){
+        System.out.println("Nhap so tien can nap:");
+        double t = sc.nextDouble();
+        if(t < 0){
+            System.out.println("So tien khong hop le!");
+            return napTien();
+        }else{
+            this.tienTrongTK += t;
+            System.out.println("Nap tien thanh cong!");
+        }
+        return t;
     }
 
     public double rutTien(){
         double phi = 1100d;
-        double t;
         System.out.println("Nhap so tien ban muon rut:");
-        t = sc.nextDouble();
+        double t = sc.nextDouble();
         if(t <= (tienTrongTK - phi)) {
             this.tienTrongTK -= t + 1100;
             System.out.println("Rut tien thanh cong!");
