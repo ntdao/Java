@@ -9,7 +9,6 @@ public class Account {
     private String tenTK;
     private double tienTrongTK;
     public static final float LAISUAT = 0.035f;
-    Scanner sc = new Scanner(System.in);
 
     public Account() {
     }
@@ -61,6 +60,7 @@ public class Account {
     }
 
     public double napTien(){
+        Scanner sc = new Scanner(System.in);
         System.out.println("Nhap so tien can nap:");
         double t = sc.nextDouble();
         if(t < 0){
@@ -74,6 +74,7 @@ public class Account {
     }
 
     public double rutTien(){
+        Scanner sc = new Scanner(System.in);
         double phi = 1100d;
         System.out.println("Nhap so tien ban muon rut:");
         double t = sc.nextDouble();

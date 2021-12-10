@@ -14,34 +14,32 @@ public class Test {
         System.out.println("Nhap gia tri xe:");
         xe.setTriGia(sc.nextFloat());
     }
+
     public static void main(String[] args) {
-        Vehicle[] xe = null;//mang chua xe
-        int n = 0;
+        Vehicle xe1 = new Vehicle();
+        Vehicle xe2 = new Vehicle();
+        Vehicle xe3 = new Vehicle();
+
         do {
             System.out.println("1. Nhap thong tin");
             System.out.println("2. Xuat thong tin");
             System.out.println("3. Thoat");
-            Scanner sc = new Scanner(System.in);
 
+            Scanner sc = new Scanner(System.in);
             System.out.println("Nhap lua chon:");
             int lc = sc.nextInt();
             switch (lc) {
                 case 1:
-                    System.out.print("Nhap so luong xe: ");
-                    n = sc.nextInt();
-                    xe = new Vehicle[n];
-                    for (int i = 0; i < n; i++) {
-                        System.out.println("Xe thu " + (i+1));
-                        xe[i] = new Vehicle();
-                        nhap(xe[i]);
-                    }
+                    nhap(xe1);
+                    nhap(xe2);
+                    nhap(xe3);
                     break;
                 case 2:
                     System.out.printf("%-30s %-20s %12s %20s %20s\n", "Ten chu xe", "Loai xe", "Dung tich", "Tri gia", "Thue phai nop");
                     System.out.println("==============================================================================================================");
-                    for (int i = 0; i < n; i++) {
-                        xe[i].xuat();
-                    }
+                    xe1.xuat();;
+                    xe2.xuat();
+                    xe3.xuat();
                     break;
                 case 3:
                     return ;

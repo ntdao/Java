@@ -1,9 +1,9 @@
 package tuan02.bai05_PhanSo;
 
 import java.util.Scanner;
+import java.lang.Math;
 
 public class Test {
-
     static void nhapPS(PhanSo p){
         Scanner sc = new Scanner(System.in);
         System.out.print("Nhap tu so: ");
@@ -15,7 +15,7 @@ public class Test {
     }
 
     static PhanSo toiGianPS(PhanSo p){
-        int num1 = p.getTuSo(), num2 = p.getMauSo();
+        int num1 = Math.abs(p.getTuSo()), num2 = Math.abs(p.getMauSo());
         while (num1 != num2) {
             if(num1 > num2)
                 num1 = num1 - num2;
@@ -49,21 +49,34 @@ public class Test {
         return new PhanSo(p1.getTuSo()*p2.getMauSo(), p1.getMauSo()*p2.getTuSo());
     }
 
+    static void soSanh(PhanSo p1, PhanSo p2){
+        float ps1 = (float) p1.getTuSo()/p1.getMauSo();
+        float ps2 = (float) p2.getTuSo()/p2.getMauSo();
+        if(ps1 == ps2){
+            System.out.println("Hai phan so bang nhau");
+        }else if(ps1 > ps2){
+            System.out.println("Phan so 1 lon hon");
+        }else{
+            System.out.println("Phan so 2 lon hon");
+        }
+    }
+
     public static void main(String[] args) {
         PhanSo p1 = new PhanSo();
         PhanSo p2 = new PhanSo();
         nhapPS(p1);
         nhapPS(p2);
-        System.out.println("Phan so 1 sau khi toi gian la:" + toiGianPS(p1));
-        System.out.println("Phan so 1 sau khi toi gian la:" + toiGianPS(p2));
+//        System.out.println("Phan so 1 sau khi toi gian la: " + toiGianPS(p1));
+//        System.out.println("Phan so 2 sau khi toi gian la: " + toiGianPS(p2));
+//
+//        System.out.print("Phan so nghich dao cua phan so 1 la: ");
+//        toiGianPS(nghichDaoPS(p1)).inPS();
 
-        System.out.println("Nghich dao phan so 1:" + nghichDaoPS(p1));
-
-        PhanSo p3 = toiGianPS(cong(p1,p2));
-        System.out.println("Tong hai phan so la:");
-        p3.inPS();
-        System.out.println("Hieu hai phan so la:" + toiGianPS(tru(p1,p2)));
-        System.out.println("Tich hai phan so la:" + toiGianPS(nhan(p1,p2)));
-        System.out.println("Thuong hai phan so la:" + toiGianPS(chia(p1,p2)));
+        System.out.print("Tong hai phan so la: ");
+        toiGianPS(cong(p1,p2)).inPS();
+        System.out.println("Hieu hai phan so la: " + toiGianPS(tru(p1,p2)));
+        System.out.println("Tich hai phan so la: " + toiGianPS(nhan(p1,p2)));
+        System.out.println("Thuong hai phan so la: " + toiGianPS(chia(p1,p2)));
+        soSanh(p1,p2);
     }
 }

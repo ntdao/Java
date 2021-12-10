@@ -3,6 +3,7 @@ package tuan02.bai04_Account;
 import java.util.Scanner;
 
 public class Test {
+
     static void nhapTK(Account tk) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap so tai khoan:");
@@ -13,17 +14,18 @@ public class Test {
         System.out.println("Nhap so du tai khoan:");
         tk.setTienTrongTK(sc.nextDouble());
     }
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
         Account[] a = null;
-        int k, lc, n = 0;
+        int k, n = 0;
         long stk1, stk2;
+        Scanner sc = new Scanner(System.in);
         do {
             System.out.println("1.Nhap thong tin khach hang\n"
                     + "2.Xuat thong tin khach hang\n" + "3.Nap tien\n" + "4.Rut tien\n"
                     + "5.Dao han\n" + "6.Chuyen khoan\n" + "7.Thoat");
             System.out.println("Nhap lua chon:");
-            lc = sc.nextInt();
+            int lc = sc.nextInt();
             switch (lc) {
                 case 1:
                     System.out.println("Nhap so luong khach hang:");
