@@ -12,5 +12,8 @@ public class Test {
         hcn.setDai(a);
         hcn.setRong(b);
         System.out.println(hcn);
+
+        HinhChuNhat hcn1 = new HinhChuNhat(5.5,3.5);
+        System.out.println(hcn1);
     }
 }

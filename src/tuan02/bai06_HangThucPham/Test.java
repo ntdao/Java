@@ -1,33 +1,29 @@
 package tuan02.bai06_HangThucPham;
 
-import java.util.Date;
 import java.util.Scanner;
 
 public class Test {
-    static HangThucPham nhapHang(){
-        HangThucPham hangThucPham = null;
-        String maHang, tenHang;
-        Date ngaySX, ngayHH;
-        double donGia;
-
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Nhap ma hang: ");
-        maHang = sc.nextLine();
-        System.out.print("Nhap ten hang: ");
-        tenHang = sc.nextLine();
-        System.out.print("Nhap don gia: ");
-        donGia = sc.nextDouble();
-        System.out.print("Nhap ngay san xuat: ");
-
-        System.out.print("Nhap ngay het han: ");
-
-
-        hangThucPham = new HangThucPham(maHang,tenHang,donGia, ngaySX,ngayHH);
-        return hangThucPham;
-    }
-
     public static void main(String[] args) {
-        HangThucPham h = new HangThucPham("123","com",12340,"2021-2-12", "2021-3-12");
-        System.out.println(h);
+        Scanner scanner = new Scanner(System.in);
+        HangThucPham tp = new HangThucPham();
+        boolean kt = true;
+        boolean th = true;
+        System.out.println("Nhập mã hàng : ");
+        tp.setMaHang(scanner.nextLine());
+        scanner.nextLine();
+        do {
+            System.out.println("Nhập tên hàng : ");
+            tp.setTenHang(scanner.nextLine());
+        } while (tp.kiemTraTenHang(kt));
+        System.out.println("Nhập đơn giá : ");
+        tp.setDonGia(scanner.nextDouble());
+        do {
+            System.out.println("Nhập năm,tháng,ngày sản xuất : ");
+            tp.setNSX(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
+            System.out.println("nhập năm,tháng,ngày hết hạn : ");
+            tp.setHSD(scanner.nextInt(), scanner.nextInt(), scanner.nextInt());
+        } while (tp.kiemTraNgay(th));
+        System.out.println(tp);
+        tp.kiemTraHSD();
     }
 }

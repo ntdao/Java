@@ -57,7 +57,7 @@ public class SinhVien {
     public String toString() {
         return "SinhVien{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + name +
                 ", diem LT=" + diemLT +
                 ", diem TH=" + diemTH +
                 ", diem TB = " + diemTB() +

@@ -75,11 +75,11 @@ public class Account {
 
     public double rutTien(){
         Scanner sc = new Scanner(System.in);
-        double phi = 1100d;
+        int  phi = 100;
         System.out.println("Nhap so tien ban muon rut:");
         double t = sc.nextDouble();
         if(t <= (tienTrongTK - phi)) {
-            this.tienTrongTK -= t + 1100;
+            this.tienTrongTK -= t + phi;
             System.out.println("Rut tien thanh cong!");
         }
         else {
@@ -100,5 +100,16 @@ public class Account {
         NumberFormat cur = NumberFormat.getCurrencyInstance(localeVN);
         String str1 = cur.format(tienTrongTK);
         System.out.printf("%-10d %-20s %-20s \n", soTK, tenTK, str1);
+    }
+
+    void nhapTK() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Nhap so tai khoan:");
+        soTK = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Nhap ten tai khoan:");
+        tenTK = sc.nextLine();
+        System.out.println("Nhap so du tai khoan:");
+        tienTrongTK = sc.nextDouble();
     }
 }

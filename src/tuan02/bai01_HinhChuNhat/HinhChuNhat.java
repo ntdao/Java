@@ -37,7 +37,7 @@ public class HinhChuNhat {
 
     @Override
     public String toString() {
-        return "HinhChuNhat{" + " chieu dai=" + dai + ", chieu rong=" + rong
-                + ", chu vi = " + tinhChuVi() + ", dien tich = " + tinhDienTich() + '}';
+        return "HinhChuNhat " + " chieu dai=" + dai + ", chieu rong=" + rong
+                + ", chu vi = " + tinhChuVi() + ", dien tich = " + tinhDienTich();
     }
 }

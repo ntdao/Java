@@ -1,7 +1,7 @@
 package tuan02.bai06_HangThucPham;
 
 import java.text.NumberFormat;
-import java.text.ParseException;
+import java.util.Calendar;
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
@@ -66,6 +66,10 @@ public class HangThucPham {
         this.ngayHH = ngayHH;
     }
 
+    public void setNgaySanXuat(){
+
+    }
+
     public boolean ktraHH(){
         Date now = new Date();
         return ngayHH.after(now);
@@ -88,4 +92,52 @@ public class HangThucPham {
                 ", ngayHH='" + ngayHH + '\'' +
                 '}';
     }
+
+    //Khởi tạo phương thức để nhập năm tháng ngày sản xuất
+    public void setNSX(int year, int month, int day) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month - 1, day);
+        this.ngaySX = calendar.getTime();
+    }
+
+    //Khởi tạo phương thức để nhập hạn sử dụng
+    public void setHSD(int year, int month, int day) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(year, month - 1, day);
+        this.ngayHH = calendar.getTime();
+    }
+
+    //khởi tạo phương thức kiểm tra tên hàng không được để trống
+    public boolean kiemTraTenHang(boolean k) {
+        if (this.tenHang == "" || this.tenHang.isEmpty()) {
+            System.out.println("Tên hàng không được để trống : ");
+        } else {
+            k = false;
+        }
+        return k;
+    }
+
+    //khởi tạo hàm kiểm tra ngày hết hạn không được nhỏ hơn ngày sản xuất
+    public boolean kiemTraNgay(boolean t) {
+        if (this.getNgaySX().compareTo(this.getNgayHH()) < 0) {
+            t = false;
+        } else {
+            System.out.println("Ngày hết hạn không được nhỏ hơn ngày sản xuất : ");
+        }
+        return t;
+    }
+
+    //khởi tạo phương thức kiểm tra hạn sử dụng của sản phẩm đã hết hạn hay còn hạn
+    public void kiemTraHSD() {
+        Date today = new Date();
+        today.getTime();
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
+        String st = simpleDateFormat.format(today);
+        if (this.getNgayHH().compareTo(today) < 0) {
+            System.out.println("Hôm nay là ngày " + st + ", hàng hóa đã hết hạn ");
+        } else {
+            System.out.println("Hôm nay là ngày " + st + ", hàng hóa vẫn còn hạn ");
+        }
+    }
+
 }
