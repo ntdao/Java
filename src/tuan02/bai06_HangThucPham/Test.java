@@ -10,7 +10,7 @@ public class Test {
         boolean th = true;
         System.out.println("Nhập mã hàng : ");
         tp.setMaHang(scanner.nextLine());
-        scanner.nextLine();
+//        scanner.nextLine();
         do {
             System.out.println("Nhập tên hàng : ");
             tp.setTenHang(scanner.nextLine());

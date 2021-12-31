@@ -69,6 +69,7 @@ public class Account {
         }else{
             this.tienTrongTK += t;
             System.out.println("Nap tien thanh cong!");
+            System.out.println("So du tai khoan cua ban la: " + tienTrongTK);
         }
         return t;
     }
@@ -81,6 +82,7 @@ public class Account {
         if(t <= (tienTrongTK - phi)) {
             this.tienTrongTK -= t + phi;
             System.out.println("Rut tien thanh cong!");
+            System.out.println("So du tai khoan cua ban la: " + tienTrongTK);
         }
         else {
             System.out.println("Tai khoan cua ban khong co du so du!");
@@ -92,6 +94,7 @@ public class Account {
     public void daoHan() {
         tienTrongTK = tienTrongTK + tienTrongTK * LAISUAT;
         System.out.println("Dao han 1 thang thanh cong!");
+        System.out.println("So du tai khoan cua ban la: " + tienTrongTK);
     }
 
     void inTK() {

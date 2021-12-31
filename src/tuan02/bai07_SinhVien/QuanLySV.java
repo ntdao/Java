@@ -6,7 +6,7 @@ public class QuanLySV {
     // tao mang sinh vien
     private SinhVien[] sinhViens;
     private int n;
-    static int count;
+    private static int count;
 
     public QuanLySV(int n) {
         this.n = n;
@@ -17,6 +17,10 @@ public class QuanLySV {
         Scanner sc = new Scanner(System.in);
         System.out.println("Nhap so luong sinh vien muon them:");
         int soSV = sc.nextInt();
+        if(soSV > n){
+            System.out.println("Khong du bo nho!");
+            return;
+        }
         do{
             System.out.println("Nhap thong tin sinh vien " + (count + 1));
             SinhVien sv = new SinhVien();

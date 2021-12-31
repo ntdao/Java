@@ -14,10 +14,6 @@ public class HangThucPham {
     public HangThucPham() {
     }
 
-    public HangThucPham(String maHang) {
-        this.maHang = maHang;
-    }
-
     public HangThucPham(String maHang, String tenHang, double donGia, Date ngaySX, Date ngayHH) {
         this.maHang = maHang;
         this.tenHang = tenHang;
@@ -54,20 +50,8 @@ public class HangThucPham {
         return ngaySX;
     }
 
-    public void setNgaySX(Date ngaySX) {
-        this.ngaySX = ngaySX;
-    }
-
     public Date getNgayHH() {
         return ngayHH;
-    }
-
-    public void setNgayHH(Date ngayHH) {
-        this.ngayHH = ngayHH;
-    }
-
-    public void setNgaySanXuat(){
-
     }
 
     public boolean ktraHH(){
@@ -84,13 +68,11 @@ public class HangThucPham {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy");
         String str1 = simpleDateFormat.format(ngaySX);
         String str2 = simpleDateFormat.format(ngayHH);
-        return "HangThucPham{" +
-                "maHang='" + maHang + '\'' +
-                ", tenHang='" + tenHang + '\'' +
-                ", donGia=" + donGia +
-                ", ngaySX='" + ngaySX + '\'' +
-                ", ngayHH='" + ngayHH + '\'' +
-                '}';
+        return "Ma hang: " + maHang +
+                ", ten hang: " + tenHang +
+                ", don gia: " + str +
+                ", ngay san xuat: " + str1 +
+                ", ngay het han: " + str2;
     }
 
     //Khởi tạo phương thức để nhập năm tháng ngày sản xuất
