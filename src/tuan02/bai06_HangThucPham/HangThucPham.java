@@ -54,11 +54,6 @@ public class HangThucPham {
         return ngayHH;
     }
 
-    public boolean ktraHH(){
-        Date now = new Date();
-        return ngayHH.after(now);
-    }
-
     @Override
     public String toString() {
         Locale locale = new Locale("vi", "VN");

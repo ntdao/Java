@@ -13,7 +13,7 @@ public class QLGD_Array {
     }
 
     public void nhap(int temp){
-        if(count > n)
+        if(count >= n)
             System.out.println("Bo nho day!");
         else {
             if(temp == 1) {
@@ -22,8 +22,9 @@ public class QLGD_Array {
                 gdv.nhap();
                 giaoDichs[count] = gdv;
                 sum1 += gdv.getSoLuong();
+                count++;
             }
-            else {
+            else if(temp == 2){
                 giaoDichs[count] = new GiaoDichTienTe();
                 GiaoDichTienTe gdtt = new GiaoDichTienTe();
                 gdtt.nhap();
@@ -31,8 +32,10 @@ public class QLGD_Array {
                 sumtien += gdtt.thanhTien();
                 sum2 += gdtt.getSoLuong();
                 dem++;
+                count++;
+            }else {
+                return;
             }
-            count++;
         }
     }
 

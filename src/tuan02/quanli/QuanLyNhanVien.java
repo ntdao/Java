@@ -34,12 +34,12 @@ public class QuanLyNhanVien {
         System.out.printf("%-20s %-10s %-15s %-10s %10s %20s %10s\n",
                 "Name", "Fac/Dept", "Deg/Pos", "Sal Ratio", "Allowance", "T.Hours/W.Days", "Salary");
         for(GiaoVien gv : giaoViens){
-            if(gv.getHoTen().equalsIgnoreCase(name)){
+            if(gv.getHoTen().equals(name)){
                 gv.hien();
             }
         }
         for(NhanVienVanPhong nv : nhanVienVanPhongs){
-            if(nv.getHoTen().equalsIgnoreCase(name)){
+            if(nv.getHoTen().equals(name)){
                 nv.hien();
             }
         }
@@ -51,12 +51,12 @@ public class QuanLyNhanVien {
         System.out.printf("%-20s %-10s %-15s %-10s %10s %20s %10s\n",
                 "Name", "Fac/Dept", "Deg/Pos", "Sal Ratio", "Allowance", "T.Hours/W.Days", "Salary");
         for(GiaoVien gv : giaoViens){
-            if(gv.getKhoa().equalsIgnoreCase(s)){
+            if(gv.getKhoa().equals(s)){
                 gv.hien();
             }
         }
         for(NhanVienVanPhong nv : nhanVienVanPhongs){
-            if(nv.getPhongBan().equalsIgnoreCase(s)){
+            if(nv.getPhongBan().equals(s)){
                 nv.hien();
             }
         }

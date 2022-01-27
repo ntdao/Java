@@ -67,13 +67,12 @@ public class QuanLy {
         String name = new Scanner(System.in).nextLine();
         int j = 0;
         for(int i = 0; i < count; i++){
-            if(!(listP[i].getHoTen().equalsIgnoreCase(name))){
+            if(!(listP[i].getHoTen().equals(name))){
                 listP[j] = listP[i];
                 j++;
             }
         }
         count = j;
-        System.out.println(count);
     }
 
     public void sapXep(){
